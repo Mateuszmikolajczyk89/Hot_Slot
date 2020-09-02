@@ -11,19 +11,28 @@ function start() {
         rollThree
     ] = roll
 
-    startButton.addEventListener('click', () => {
-        console.log(randomTimeAnimation(2));
+    function startRoll() {
         rollOne.style.animation = `rolling ${randomTimeAnimation(2)}s linear `
         rollTwo.style.animation = `rolling ${randomTimeAnimation(3)}s 0.5s linear `
         rollThree.style.animation = `rolling ${randomTimeAnimation(4)}s 0.7s linear `
+        startButton.removeEventListener('click', startRoll);
         roll.forEach((el, index) => {
             el.addEventListener('animationend', () => {
                 el.style.animation = '';
-                setTimeout(() => {}, 1500);
+
+                setTimeout(() => {
+                    startButton.addEventListener('click', startRoll)
+                }, 3000);
             })
         })
-    })
+    }
+    startButton.addEventListener('click', startRoll)
 }
+
+
+
+
+
 
 export {
     start
