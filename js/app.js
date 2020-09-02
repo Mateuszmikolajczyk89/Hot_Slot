@@ -1,1 +1,5 @@
-console.log('działa');
+import {
+    start
+} from './start.js';
+
+start();

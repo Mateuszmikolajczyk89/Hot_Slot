@@ -1,4 +1,69 @@
-body {
-    margin: 0;
-    background-color: rgb(233, 95, 95);
+@import "reset";
+
+
+
+.arcadeGame {
+    position: relative;
+    height: 100vh;
+    background-color: rgb(243, 106, 26);
+    min-height: 600px;
+    overflow: hidden;
+
+    &__window {
+        position: absolute;
+        display: flex;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 50vw;
+        height: 60vh;
+        min-width: 500px;
+
+        border: 10px solid black;
+        overflow: hidden;
+    }
+
+
+
+    @keyframes rolling {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(0, -74%);
+        }
+
+
+    }
+
+
+    &__roll {
+        width: 33.3%;
+        height: 330vh;
+        border: 1px solid black;
+
+
+    }
+
+    &__field {
+
+        height: 20vh;
+        border-bottom: 3px solid black;
+
+    }
+
+    &__panel {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 65vw;
+        height: 25vh;
+        min-width: 600px;
+        border: 1px solid black;
+
+    }
+
+
 }
