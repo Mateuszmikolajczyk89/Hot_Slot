@@ -19,14 +19,15 @@
         width: 50vw;
         height: 60vh;
         min-width: 500px;
-        border: 10px solid black;
+        box-shadow: 0 0 0 15px black;
+        border-radius: 5% 5% 0 0;
         overflow: hidden;
     }
 
     &__roll {
         width: 33.3%;
         height: 330vh;
-        border: 1px solid black;
+
 
 
     }
@@ -34,7 +35,8 @@
     &__field {
         position: relative;
         height: 20vh;
-        // border-bottom: 3px solid black;
+        border-bottom: 3px solid black;
+
     }
 
     &__img {
@@ -51,15 +53,37 @@
 
     &__panel {
         position: absolute;
-        top: 70%;
+        top: 68%;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 65vw;
-        height: 25vh;
+        width: 55%;
+        height: 30vh;
         min-width: 600px;
         border: 1px solid black;
+        box-shadow: 0 0 0 15px black;
+        border-radius: 30% 30% 0 0;
+    }
+
+    .start {
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border: 1px solid black;
+        cursor: pointer;
+        box-shadow: 1px 7px 1px 7px black;
+        transition: .2s;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 15px;
 
     }
 
+    .click {
 
+        box-shadow: 4px 7px 1px 12px black;
+        transform: scale(0.9);
+    }
 }
