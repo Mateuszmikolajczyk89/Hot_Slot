@@ -1,25 +1,39 @@
-@import "reset";
+@import "mixins";
 @import "keyframes";
+@import "reset";
+@import "fonts";
 
 
+
+html {
+    font-family: $base-font;
+}
 
 .arcadeGame {
     position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 65vw;
+
+    background-color: black;
+    border-radius: 10% 10% 0 0;
     height: 100vh;
     min-height: 600px;
     overflow: hidden;
 
-
     &__window {
+
         position: absolute;
         display: flex;
         top: 30%;
         left: 50%;
         transform: translate(-50%, -40%);
-        width: 50vw;
+        width: 40vw;
         height: 60vh;
         min-width: 500px;
-        box-shadow: 0 0 0 15px black;
+        background-color: white;
+        box-shadow: 0 0 0 15px rgb(117, 117, 117);
         border-radius: 5% 5% 0 0;
         overflow: hidden;
     }
@@ -47,7 +61,7 @@
 
         max-width: 80%;
         max-height: 80%;
-        // background-color: #ffffff;
+
     }
 
 
@@ -56,34 +70,58 @@
         top: 68%;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 55%;
+        width: 50%;
         height: 30vh;
         min-width: 600px;
-        border: 1px solid black;
-        box-shadow: 0 0 0 15px black;
+        background-color: white;
+        border: 1px solid rgb(117, 117, 117);
+        ;
+        box-shadow: 0 0 0 15px rgb(117, 117, 117);
+        ;
         border-radius: 30% 30% 0 0;
     }
 
-    .start {
+    &__start {
         position: absolute;
         top: 40%;
         left: 70%;
-        width: 100px;
-        height: 100px;
+        padding: 40px 30px;
+        font-family: $base-font;
         background-color: #fff;
-        border: 1px solid black;
         cursor: pointer;
-        box-shadow: 1px 7px 1px 7px black;
+        transform: scale(1);
+        box-shadow: 1px 7px 1px 7px rgb(117, 117, 117);
         transition: .2s;
         letter-spacing: 2px;
-        font-weight: bold;
-        font-size: 15px;
+        font-size: 25px;
 
+    }
+
+
+    &__credit {
+        @include panel_interface;
+        left: 40%;
+
+
+        div {
+            @include panel_interface_value
+        }
+    }
+
+    &__bet {
+        @include panel_interface;
+        left: 25%;
+
+
+        div {
+            @include panel_interface_value
+        }
     }
 
     .click {
 
-        box-shadow: 4px 7px 1px 12px black;
+        box-shadow: 4px 7px 1px 12px rgb(117, 117, 117);
         transform: scale(0.9);
+
     }
 }

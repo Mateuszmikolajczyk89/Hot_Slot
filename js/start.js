@@ -12,7 +12,7 @@ import {
 
 function start() {
     const roll = document.querySelectorAll('.arcadeGame__roll')
-    const startButton = document.querySelector('.start');
+    const startButton = document.querySelector('.arcadeGame__start');
     const [
         rollOne,
         rollTwo,
@@ -21,17 +21,18 @@ function start() {
 
 
     function startRoll() {
+        startButton.removeEventListener('click', startRoll);
         clickEffects(startButton)
 
-        setTimeout(replacement, 500);
+        setTimeout(replacement, 600);
         rollOne.style.animation = `rolling ${randomNumber(3.5,1.2)}s cubic-bezier(.2, 0.2, 0, 1.3) `
         rollTwo.style.animation = `rolling ${randomNumber(4,1.2)}s 0.2s cubic-bezier(.2, 0.2, 0, 1.3) `
-        rollThree.style.animation = `rolling ${randomNumber(4.5,1.2)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `
+        rollThree.style.animation = `rolling ${randomNumber(4.5,1.3)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `
 
 
 
 
-        startButton.removeEventListener('click', startRoll);
+
 
         roll.forEach((el) => {
             el.addEventListener('animationend', () => {
@@ -41,7 +42,7 @@ function start() {
 
                     startButton.addEventListener('click', startRoll)
 
-                }, 3000);
+                }, 2000);
             })
         })
     }
