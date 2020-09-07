@@ -187,8 +187,8 @@ html {
   height: 60vh;
   min-width: 500px;
   background-color: white;
-  -webkit-box-shadow: 0 0 0 15px #757575;
-          box-shadow: 0 0 0 15px #757575;
+  -webkit-box-shadow: 0 0 0 15px #21cc85;
+          box-shadow: 0 0 0 15px #21cc85;
   border-radius: 5% 5% 0 0;
   overflow: hidden;
 }
@@ -201,7 +201,7 @@ html {
 .arcadeGame__field {
   position: relative;
   height: 20vh;
-  border-bottom: 3px solid black;
+  border: 3px solid black;
 }
 
 .arcadeGame__img {
@@ -217,18 +217,21 @@ html {
 
 .arcadeGame__panel {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 68%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  width: 50%;
+  width: 70%;
   height: 30vh;
   min-width: 600px;
   background-color: white;
-  border: 1px solid #757575;
-  -webkit-box-shadow: 0 0 0 15px #757575;
-          box-shadow: 0 0 0 15px #757575;
+  border: 1px solid #21cc85;
+  -webkit-box-shadow: 0 0 0 15px #21cc85;
+          box-shadow: 0 0 0 15px #21cc85;
   border-radius: 30% 30% 0 0;
 }
 
@@ -254,29 +257,41 @@ html {
 
 .arcadeGame__credit {
   position: absolute;
-  top: 40%;
-  padding: 15px 40px;
+  top: 45%;
+  padding: 10px 30px;
   text-align: center;
   left: 40%;
 }
 
 .arcadeGame__credit div {
-  margin: 10px;
-  padding: 10px 30px;
+  margin-top: 3px;
+  padding: 5px 15px;
   border: 1px solid black;
+  margin-top: 10px;
 }
 
 .arcadeGame__bet {
   position: absolute;
-  top: 40%;
-  padding: 15px 40px;
+  top: 45%;
+  padding: 10px 30px;
   text-align: center;
-  left: 25%;
+  left: 10%;
 }
 
 .arcadeGame__bet div {
-  margin: 10px;
-  padding: 10px 30px;
+  margin-top: 3px;
+  padding: 5px 15px;
+}
+
+.arcadeGame__betPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.arcadeGame__betPanel .bid {
+  width: 50px;
   border: 1px solid black;
 }
 

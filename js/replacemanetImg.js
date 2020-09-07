@@ -4,7 +4,6 @@ import {
 
 const replaceImg = document.querySelectorAll('.replace_begin');
 const repalceEnd = document.querySelectorAll('.replace_end')
-
 const imgSlot = ["./img/blackberry.png", "./img/cherry.jpg", "./img/clover.png", "./img/emerland.png", "./img/lemon.png", "./img/seven.png"]
 
 

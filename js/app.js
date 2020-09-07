@@ -1,5 +1,11 @@
 import {
-    start
+    startGame
 } from './start.js';
 
-start();
+import {
+    betCheck
+} from './decreaseIncreaseBet.js';
+
+
+betCheck();
+startGame();

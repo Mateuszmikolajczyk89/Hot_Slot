@@ -9,15 +9,16 @@ import {
 import {
     clickEffects,
 } from './buttonEffect.js';
+const roll = document.querySelectorAll('.arcadeGame__roll')
+const startButton = document.querySelector('.arcadeGame__start');
+const [
+    rollOne,
+    rollTwo,
+    rollThree
+] = roll
 
-function start() {
-    const roll = document.querySelectorAll('.arcadeGame__roll')
-    const startButton = document.querySelector('.arcadeGame__start');
-    const [
-        rollOne,
-        rollTwo,
-        rollThree
-    ] = roll
+function startGame() {
+
 
 
     function startRoll() {
@@ -61,6 +62,6 @@ function start() {
 
 
 export {
-    start
+    startGame
 
 };
