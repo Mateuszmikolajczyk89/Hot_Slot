@@ -50,7 +50,8 @@ html {
     &__field {
         position: relative;
         height: 20vh;
-        border: 3px solid black;
+        border: 3px solid rgb(33, 204, 133);
+
 
     }
 
@@ -92,7 +93,7 @@ html {
         background-color: #fff;
         cursor: pointer;
         transform: scale(1);
-        box-shadow: 1px 7px 1px 7px rgb(117, 117, 117);
+        box-shadow: 1px 7px 1px 7px rgb(33, 204, 133);
         transition: .2s;
         letter-spacing: 2px;
         font-size: 25px;
@@ -128,13 +129,14 @@ html {
 
         .bid {
             width: 50px;
-            border: 1px solid black;
+            border: 1px solid rgb(33, 204, 133);
+
         }
     }
 
     .click {
 
-        box-shadow: 4px 7px 1px 12px rgb(117, 117, 117);
+        box-shadow: 4px 7px 1px 12px rgb(33, 204, 133);
         transform: scale(0.9);
 
     }

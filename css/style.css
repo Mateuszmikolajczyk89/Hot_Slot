@@ -201,7 +201,7 @@ html {
 .arcadeGame__field {
   position: relative;
   height: 20vh;
-  border: 3px solid black;
+  border: 3px solid #21cc85;
 }
 
 .arcadeGame__img {
@@ -246,8 +246,8 @@ html {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
-  -webkit-box-shadow: 1px 7px 1px 7px #757575;
-          box-shadow: 1px 7px 1px 7px #757575;
+  -webkit-box-shadow: 1px 7px 1px 7px #21cc85;
+          box-shadow: 1px 7px 1px 7px #21cc85;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -292,12 +292,12 @@ html {
 
 .arcadeGame__betPanel .bid {
   width: 50px;
-  border: 1px solid black;
+  border: 1px solid #21cc85;
 }
 
 .arcadeGame .click {
-  -webkit-box-shadow: 4px 7px 1px 12px #757575;
-          box-shadow: 4px 7px 1px 12px #757575;
+  -webkit-box-shadow: 4px 7px 1px 12px #21cc85;
+          box-shadow: 4px 7px 1px 12px #21cc85;
   -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
           transform: scale(0.9);

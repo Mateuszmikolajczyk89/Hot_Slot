@@ -1,11 +1,14 @@
 import {
-    startGame
-} from './start.js';
+    startGame,
 
+} from './start.js';
 import {
     betCheck
-} from './decreaseIncreaseBet.js';
+} from './bet.js'
 
+import {
+    credits
+} from "./credits.js"
 
 betCheck();
 startGame();
