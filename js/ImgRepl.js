@@ -18,7 +18,6 @@ class ImgRepl {
             el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(6))])
             atrr.push(el.getAttribute('src'));
         })
-
         repalceEnd.forEach((el, index) => {
             el.setAttribute('src', atrr[index]);
         })
