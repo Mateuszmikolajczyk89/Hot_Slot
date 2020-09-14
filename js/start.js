@@ -1,6 +1,6 @@
 import {
     RandomNumber
-} from './randomNumber.js';
+} from './RandomNumber.js';
 
 import {
     ImgRepl
@@ -15,10 +15,9 @@ import {
     value
 } from './bet.js';
 
-
 import {
     Credits
-} from './credits.js'
+} from './Credits.js'
 
 const imgRepl = new ImgRepl();
 const randomNumber = new RandomNumber();
