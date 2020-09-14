@@ -4,7 +4,7 @@ import {
 
 import {
     ImgRepl
-} from './imgRepl.js'
+} from './imgReplacement.js'
 
 import {
     clickEffects,
