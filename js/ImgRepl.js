@@ -1,6 +1,6 @@
 import {
     RandomNumber
-} from './RandomNumber.js'
+} from './randomNumber.js'
 
 
 
