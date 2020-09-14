@@ -2,4 +2,4 @@
 my first hot slot game
 
 
-https://mateuszmikolajczyk89.github.io/hot_slot/
+https://github.com/mateuszmikolajczyk89/mateuszmikolajczyk89.github.io/hot_slot/
