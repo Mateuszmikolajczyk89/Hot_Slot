@@ -2,10 +2,11 @@ import {
     startGame,
 } from './start.js';
 import {
-    betCheck
+    Bet
 } from './bet.js'
 
 
 
-betCheck();
-startGame();
+new Bet().betCheck();
+
+startGame()

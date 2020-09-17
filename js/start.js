@@ -11,16 +11,20 @@ import {
 } from './buttonEffect.js';
 
 import {
-    value
+    Bet
 } from './bet.js';
 
 import {
     Credits
 } from './credits.js'
 
+
+
 const imgRepl = new ImgRepl();
 const randomNumber = new RandomNumber();
-const wallet = new Credits();
+const credit = new Credits();
+const bet = new Bet();
+
 const roll = document.querySelectorAll('.arcadeGame__roll')
 const startButton = document.querySelector('.arcadeGame__start');
 const [
@@ -36,12 +40,12 @@ function startGame() {
 
 
     function startRoll() {
-        if (wallet.valueNumber() < value()) return;
+        if (credit.valueNumber() < bet.value()) return;
         startButton.removeEventListener('click', startRoll);
         clickEffects(startButton)
 
 
-        setTimeout(imgRepl.replacement, 620);
+        setTimeout(imgRepl.replacement, 600);
         rollOne.style.animation = `rolling ${randomNumber.random(2.1,1.2)}s cubic-bezier(.2, 0.2, 0, 1.3) `
         rollTwo.style.animation = `rolling ${randomNumber.random(2.3,1.3)}s 0.2s cubic-bezier(.2, 0.2, 0, 1.3) `
         rollThree.style.animation = `rolling ${randomNumber.random(2.7,2.6)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `
@@ -62,7 +66,8 @@ function startGame() {
                 }, 500);
             })
         })
-        wallet.valueCredit(value());
+        credit.valueCredit(bet.value());
+
     }
 
 

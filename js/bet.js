@@ -6,36 +6,37 @@ let betIndex = 0;
 bid.textContent = bet[betIndex];
 let bidValue = 1;
 
-function betCheck() {
 
-    plusButton.addEventListener('click', function () {
+class Bet {
 
-        if (betIndex === bet.length - 1) return;
-        ++betIndex;
-        bid.textContent = bet[betIndex]
-        bidValue = bet[betIndex]
-        console.log(betIndex);
-    })
 
-    minusButton.addEventListener('click', function () {
 
-        if (betIndex === 0) return;
-        --betIndex;
-        bid.textContent = bet[betIndex]
-        bidValue = bet[betIndex]
-        console.log(betIndex);
-    })
+    betCheck() {
 
+        plusButton.addEventListener('click', function () {
+
+            if (betIndex === bet.length - 1) return;
+            ++betIndex;
+            bid.textContent = bet[betIndex]
+            bidValue = bet[betIndex]
+        })
+
+        minusButton.addEventListener('click', function () {
+
+            if (betIndex === 0) return;
+            --betIndex;
+            bid.textContent = bet[betIndex]
+            bidValue = bet[betIndex]
+        })
+
+    }
+
+    value() {
+        return bidValue;
+    }
 }
-
-function value() {
-    return bidValue;
-}
-
 export {
-    betCheck,
-    value
-
+    Bet
 }
 
 // class bid {

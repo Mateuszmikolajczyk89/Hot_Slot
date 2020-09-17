@@ -13,6 +13,7 @@ class Credits {
         creditsNumber = parseInt(creditsValue.textContent)
 
     }
+
     valueNumber() {
         return creditsNumber;
     }
