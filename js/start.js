@@ -22,7 +22,7 @@ import {
 
 const imgRepl = new ImgRepl();
 const randomNumber = new RandomNumber();
-const credit = new Credits();
+const credits = new Credits();
 const bet = new Bet();
 
 const roll = document.querySelectorAll('.arcadeGame__roll')
@@ -40,7 +40,7 @@ function startGame() {
 
 
     function startRoll() {
-        if (credit.valueNumber() < bet.value()) return;
+        if (credits.valueNumber() < bet.value()) return;
         startButton.removeEventListener('click', startRoll);
         clickEffects(startButton)
 
@@ -66,7 +66,7 @@ function startGame() {
                 }, 500);
             })
         })
-        credit.valueCredit(bet.value());
+        credits.valueCredit(bet.value());
 
     }
 

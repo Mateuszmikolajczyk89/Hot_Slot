@@ -4,7 +4,9 @@ import {
 
 import {
     Win
-} from './win.js'
+} from './win.js';
+
+
 
 const win = new Win();
 const randomNumber = new RandomNumber();
@@ -18,14 +20,14 @@ class ImgRepl {
     replacement() {
         const atrr = [];
         replaceImg.forEach((el) => {
-            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(6))])
+            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(1))])
             atrr.push(el.getAttribute('src'));
         })
         repalceEnd.forEach((el, index) => {
             el.setAttribute('src', atrr[index]);
         })
         win.makeTableOfAttributes();
-        win.winCheck;
+        win.winCheck();
     }
 
 
@@ -38,7 +40,7 @@ class ImgRepl {
 export {
     ImgRepl,
     replaceImg
-    
+
 
 
 }

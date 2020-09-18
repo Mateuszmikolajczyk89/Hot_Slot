@@ -134,6 +134,14 @@ html {
         }
     }
 
+    &__winValue {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+    }
+
     .click {
 
         box-shadow: 4px 7px 1px 12px rgb(33, 204, 133);

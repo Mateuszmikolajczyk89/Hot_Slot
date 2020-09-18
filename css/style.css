@@ -295,6 +295,16 @@ html {
   border: 1px solid #21cc85;
 }
 
+.arcadeGame__winValue {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 50px;
+}
+
 .arcadeGame .click {
   -webkit-box-shadow: 4px 7px 1px 12px #21cc85;
           box-shadow: 4px 7px 1px 12px #21cc85;

@@ -9,8 +9,15 @@ class Credits {
             return creditsValue.textContent = 0;
         }
         creditsValue.textContent -= bidValue;
-
         creditsNumber = parseInt(creditsValue.textContent)
+
+    }
+
+    winCredit(winCheck) {
+        if (winCheck) {
+            creditsValue.textContent = (creditsNumber + winCheck);
+            creditsNumber = parseInt(creditsValue.textContent);
+        }
 
     }
 
