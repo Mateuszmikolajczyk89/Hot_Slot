@@ -2,13 +2,9 @@ import {
     RandomNumber
 } from './randomNumber.js'
 
-import {
-    Win
-} from './win.js';
 
 
 
-const win = new Win();
 const randomNumber = new RandomNumber();
 const replaceImg = document.querySelectorAll('.replace_begin');
 const repalceEnd = document.querySelectorAll('.replace_end')
@@ -20,17 +16,14 @@ class ImgRepl {
     replacement() {
         const atrr = [];
         replaceImg.forEach((el) => {
-            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(1))])
+            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(6))])
             atrr.push(el.getAttribute('src'));
         })
         repalceEnd.forEach((el, index) => {
             el.setAttribute('src', atrr[index]);
         })
-        win.makeTableOfAttributes();
-        win.winCheck();
+
     }
-
-
 
 }
 

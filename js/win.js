@@ -13,11 +13,12 @@ import {
 
 const credits = new Credits();
 const bet = new Bet();
+let counterOfWins = 1;
 class Win {
 
     constructor() {
         this.table = [];
-        this.winAmount = 10;
+        this.winAmount = 5;
         this.winValueDiv = document.querySelector('.arcadeGame__winValue')
     };
 
@@ -30,42 +31,48 @@ class Win {
         });
     }
     winCheck() {
+
         if (this.table[0] === this.table[3] && this.table[3] === this.table[6]) {
             this.winValue();
-            credits.winCredit(this.winAmount * bet.value());
+            ++counterOfWins;
 
         };
 
         if (this.table[1] === this.table[4] && this.table[4] === this.table[7]) {
             this.winValue();
-            credits.winCredit(this.winAmount * bet.value());
+            ++counterOfWins;
 
         };
 
         if (this.table[2] === this.table[5] && this.table[5] === this.table[8]) {
             this.winValue();
-            credits.winCredit(this.winAmount * bet.value());
+            ++counterOfWins;
 
         };
 
         if (this.table[0] === this.table[4] && this.table[4] === this.table[8]) {
             this.winValue();
-            credits.winCredit(this.winAmount * bet.value());
+            ++counterOfWins;
 
         };
 
         if (this.table[2] === this.table[4] && this.table[4] === this.table[6]) {
             this.winValue();
-            credits.winCredit(this.winAmount * bet.value());
+            ++counterOfWins;
 
         };
     }
 
     winValue() {
-        this.winValueDiv.textContent = this.winAmount * bet.value()
+
+        this.winValueDiv.textContent = this.winAmount * bet.value() * counterOfWins;
         setTimeout(() => {
+
             this.winValueDiv.textContent = 0;
-        }, 2000);
+            credits.winCredit(this.winAmount * bet.value());
+            counterOfWins = 1;
+        }, 1000);
+
     }
 
 

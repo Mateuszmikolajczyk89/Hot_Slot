@@ -1,8 +1,4 @@
 import {
-    RandomNumber
-} from './randomNumber.js';
-
-import {
     ImgRepl
 } from './imgReplacement.js'
 
@@ -18,20 +14,20 @@ import {
     Credits
 } from './credits.js'
 
+import {
+    Win
+} from './win.js'
 
+import {
+    rollAnimation
+} from './roll.js'
 
 const imgRepl = new ImgRepl();
-const randomNumber = new RandomNumber();
 const credits = new Credits();
 const bet = new Bet();
-
-const roll = document.querySelectorAll('.arcadeGame__roll')
+const win = new Win();
 const startButton = document.querySelector('.arcadeGame__start');
-const [
-    rollOne,
-    rollTwo,
-    rollThree
-] = roll
+
 
 function startGame() {
 
@@ -44,29 +40,28 @@ function startGame() {
         startButton.removeEventListener('click', startRoll);
         clickEffects(startButton)
 
-
-        setTimeout(imgRepl.replacement, 600);
-        rollOne.style.animation = `rolling ${randomNumber.random(2.1,1.2)}s cubic-bezier(.2, 0.2, 0, 1.3) `
-        rollTwo.style.animation = `rolling ${randomNumber.random(2.3,1.3)}s 0.2s cubic-bezier(.2, 0.2, 0, 1.3) `
-        rollThree.style.animation = `rolling ${randomNumber.random(2.7,2.6)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `
+        rollAnimation();
 
 
+        setTimeout(() => {
+            imgRepl.replacement();
+        }, 600);
 
 
 
-        roll.forEach((el) => {
-            roll[2].addEventListener('animationend', () => {
-                el.style.animation = '';
-
-                setTimeout(() => {
 
 
-                    startButton.addEventListener('click', startRoll);
+        setTimeout(() => {
+            win.makeTableOfAttributes();
+            win.winCheck()
+            startButton.addEventListener('click', startRoll);
+        }, 5200);
 
-                }, 500);
-            })
-        })
+
+
+
         credits.valueCredit(bet.value());
+
 
     }
 
