@@ -22,6 +22,12 @@ import {
     rollAnimation
 } from './roll.js'
 
+
+
+
+
+
+
 const imgRepl = new ImgRepl();
 const credits = new Credits();
 const bet = new Bet();
@@ -31,11 +37,12 @@ const startButton = document.querySelector('.arcadeGame__start');
 
 function startGame() {
 
-
+    new Bet().betCheck();
 
 
 
     function startRoll() {
+        bet.removeBetCheck();
         if (credits.valueNumber() < bet.value()) return;
         startButton.removeEventListener('click', startRoll);
         clickEffects(startButton)
@@ -54,7 +61,9 @@ function startGame() {
         setTimeout(() => {
             win.makeTableOfAttributes();
             win.winCheck()
+
             startButton.addEventListener('click', startRoll);
+            
         }, 5200);
 
 

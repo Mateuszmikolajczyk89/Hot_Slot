@@ -6,6 +6,19 @@ let betIndex = 0;
 bid.textContent = bet[betIndex];
 let bidValue = 1;
 
+const plus = () => {
+    if (betIndex === bet.length - 1) return;
+    ++betIndex;
+    bid.textContent = bet[betIndex]
+    bidValue = bet[betIndex]
+}
+const minus = () => {
+    if (betIndex === 0) return;
+    --betIndex;
+    bid.textContent = bet[betIndex]
+    bidValue = bet[betIndex]
+}
+
 
 class Bet {
 
@@ -13,22 +26,15 @@ class Bet {
 
     betCheck() {
 
-        plusButton.addEventListener('click', function () {
+        plusButton.addEventListener('click', plus)
 
-            if (betIndex === bet.length - 1) return;
-            ++betIndex;
-            bid.textContent = bet[betIndex]
-            bidValue = bet[betIndex]
-        })
+        minusButton.addEventListener('click', minus)
 
-        minusButton.addEventListener('click', function () {
+    }
+    removeBetCheck() {
+        plusButton.removeEventListener('click', plus)
 
-            if (betIndex === 0) return;
-            --betIndex;
-            bid.textContent = bet[betIndex]
-            bidValue = bet[betIndex]
-        })
-
+        minusButton.removeEventListener('click', minus)
     }
 
     value() {
@@ -38,12 +44,3 @@ class Bet {
 export {
     Bet
 }
-
-// class bid {
-//     constructor() {
-
-
-
-
-//     }
-// }

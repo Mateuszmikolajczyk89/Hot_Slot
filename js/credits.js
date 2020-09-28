@@ -1,6 +1,8 @@
 const creditsValue = document.querySelector('.arcadeGame__credit div ');
 let creditsNumber = 500;
-
+import {
+    Bet
+} from './bet.js';
 
 class Credits {
 
@@ -14,8 +16,16 @@ class Credits {
     }
 
     winCredit(winCheck) {
+        this.counterOfCredits = 0
         if (winCheck) {
-            creditsValue.textContent = (creditsNumber + winCheck);
+            const clear = setInterval(() => {
+                creditsValue.textContent = (creditsNumber + ++this.counterOfCredits);
+                if (this.counterOfCredits === winCheck) {
+                    clearInterval(clear)
+                    this.counterOfCredits = 0;
+                }
+            }, 50);
+            new Bet().betCheck();
             creditsNumber = parseInt(creditsValue.textContent);
         }
 
