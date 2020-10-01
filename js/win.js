@@ -19,9 +19,8 @@ class Win {
     constructor() {
 
         this.table = [];
-        this.winAmount = 3;
+        this.winAmount = 2;
         this.winValueDiv = document.querySelector('.arcadeGame__winValue');
-        this.oldTime = 0;
     };
 
 
@@ -34,46 +33,210 @@ class Win {
     }
     winCheck() {
 
-        if (this.table[0] === this.table[3] && this.table[3] === this.table[6]) {
-            ++counterOfWins;
-            this.winValue();
+        if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/blackberry.png")) {
+            for (let i = 0; i < 2; i++) {
+                ++counterOfWins
+            }
 
 
-        };
 
-        if (this.table[1] === this.table[4] && this.table[4] === this.table[7]) {
-            ++counterOfWins;
-            this.winValue();
-
-
-        };
-
-        if (this.table[2] === this.table[5] && this.table[5] === this.table[8]) {
-            ++counterOfWins;
-            this.winValue();
+        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/cherry.jpg")) {
+            for (let i = 0; i < 3; i++) {
+                ++counterOfWins
+            }
 
 
-        };
-
-        if (this.table[0] === this.table[4] && this.table[4] === this.table[8]) {
-            ++counterOfWins;
-            this.winValue();
-
-
-        };
-
-        if (this.table[2] === this.table[4] && this.table[4] === this.table[6]) {
-            ++counterOfWins;
-            this.winValue();
+        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/lemon.png")) {
+            for (let i = 0; i < 4; i++) {
+                ++counterOfWins
+            }
 
 
-        };
+        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/clover.png")) {
+            for (let i = 0; i < 6; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/emerland.png")) {
+            for (let i = 0; i < 8; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/seven.png")) {
+            for (let i = 0; i < 20; i++) {
+                ++counterOfWins
+            }
+
+        }
+
+
+
+        if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/blackberry.png")) {
+            for (let i = 0; i < 2; i++) {
+                ++counterOfWins
+            }
+
+
+
+        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/cherry.jpg")) {
+            for (let i = 0; i < 3; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/lemon.png")) {
+            for (let i = 0; i < 4; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/clover.png")) {
+            for (let i = 0; i < 6; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/emerland.png")) {
+            for (let i = 0; i < 8; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/seven.png")) {
+            for (let i = 0; i < 20; i++) {
+                ++counterOfWins
+            }
+
+
+        }
+
+        if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/blackberry.png")) {
+            for (let i = 0; i < 2; i++) {
+                ++counterOfWins
+            }
+
+
+
+        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/cherry.jpg")) {
+            for (let i = 0; i < 3; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/lemon.png")) {
+            for (let i = 0; i < 4; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/clover.png")) {
+            for (let i = 0; i < 6; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/emerland.png")) {
+            for (let i = 0; i < 8; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8] && (this.table[2]) === "./img/seven.png")) {
+            for (let i = 0; i < 20; i++) {
+                ++counterOfWins
+            }
+
+
+        }
+
+        if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/blackberry.png")) {
+            for (let i = 0; i < 2; i++) {
+                ++counterOfWins
+            }
+
+
+
+        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/cherry.jpg")) {
+            for (let i = 0; i < 3; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/lemon.png")) {
+            for (let i = 0; i < 4; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/clover.png")) {
+            for (let i = 0; i < 6; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/emerland.png")) {
+            for (let i = 0; i < 8; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/seven.png")) {
+            for (let i = 0; i < 20; i++) {
+                ++counterOfWins
+            }
+
+
+        }
+
+
+        if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/blackberry.png")) {
+            for (let i = 0; i < 2; i++) {
+                ++counterOfWins
+            }
+
+
+
+        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/cherry.jpg")) {
+            for (let i = 0; i < 3; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/lemon.png")) {
+            for (let i = 0; i < 4; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/clover.png")) {
+            for (let i = 0; i < 6; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/emerland.png")) {
+            for (let i = 0; i < 8; i++) {
+                ++counterOfWins
+            }
+
+
+        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/seven.png")) {
+            for (let i = 0; i < 20; i++) {
+                ++counterOfWins
+            }
+
+
+        }
+        this.winValue();
     }
 
     winValue() {
-        this.winValueDiv.textContent = this.winAmount * bet.value() * counterOfWins;
+        this.winValueDiv.textContent = bet.value() * counterOfWins;
+        this.win = this.winValueDiv.textContent;
         this.counter = this.winValueDiv.textContent;
-
+        console.log(counterOfWins);
 
         setTimeout(() => {
 
@@ -87,10 +250,11 @@ class Win {
 
 
 
-            credits.winCredit(this.winAmount * bet.value() * counterOfWins);
+            credits.winCredit(bet.value() * counterOfWins);
+
             counterOfWins = 0;
         }, 1000);
-        
+
     }
 
 

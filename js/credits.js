@@ -24,8 +24,8 @@ class Credits {
                     clearInterval(clear)
                     this.counterOfCredits = 0;
                 }
-            }, 50);
-            new Bet().betCheck();
+            }, 25);
+            
             creditsNumber = parseInt(creditsValue.textContent);
         }
 

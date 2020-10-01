@@ -16,7 +16,7 @@ class ImgRepl {
     replacement() {
         const atrr = [];
         replaceImg.forEach((el) => {
-            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(2)))])
+            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(6)))])
             atrr.push(el.getAttribute('src'));
         })
         repalceEnd.forEach((el, index) => {

@@ -61,9 +61,9 @@ function startGame() {
         setTimeout(() => {
             win.makeTableOfAttributes();
             win.winCheck()
-
+            new Bet().betCheck();
             startButton.addEventListener('click', startRoll);
-            
+
         }, 5200);
 
 
