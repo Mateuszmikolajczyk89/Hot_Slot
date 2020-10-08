@@ -20,7 +20,7 @@ const minus = () => {
 }
 
 
-class Bet {
+export class Bet {
 
 
 
@@ -40,7 +40,4 @@ class Bet {
     value() {
         return bidValue;
     }
-}
-export {
-    Bet
 }

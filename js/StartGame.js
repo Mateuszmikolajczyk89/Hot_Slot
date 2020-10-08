@@ -1,6 +1,6 @@
 import {
     ImgRepl
-} from './imgReplacement.js'
+} from './ImgRepl.js'
 
 import {
     clickEffects,
@@ -8,15 +8,15 @@ import {
 
 import {
     Bet
-} from './bet.js';
+} from './Bet.js';
 
 import {
     Credits
-} from './credits.js'
+} from './Credits.js'
 
 import {
     Win
-} from './win.js'
+} from './Win.js'
 
 import {
     rollAnimation
@@ -35,16 +35,16 @@ const win = new Win();
 const startButton = document.querySelector('.arcadeGame__start');
 
 
-function startGame() {
 
-    new Bet().betCheck();
+export class StartGame {
+    constructor(flag) {
+        this.flag = flag;
 
-
-
-    function startRoll() {
+    }
+    startRoll() {
         bet.removeBetCheck();
         if (credits.valueNumber() < bet.value()) return;
-        startButton.removeEventListener('click', startRoll);
+
         clickEffects(startButton)
 
         rollAnimation();
@@ -54,20 +54,13 @@ function startGame() {
             imgRepl.replacement();
         }, 600);
 
-
-
-
-
         setTimeout(() => {
             win.makeTableOfAttributes();
             win.winCheck()
+            this.flag = !this.flag;
             new Bet().betCheck();
-            startButton.addEventListener('click', startRoll);
 
         }, 5200);
-
-
-
 
         credits.valueCredit(bet.value());
 
@@ -76,8 +69,19 @@ function startGame() {
 
 
 
+    inicialize() {
+        new Bet().betCheck();
+        startButton.addEventListener('click', () => {
+            if (this.flag) {
+                this.startRoll()
+                this.flag = !this.flag;
+            };
+        });
 
-    startButton.addEventListener('click', startRoll);
+
+    }
+
+
 
 
 
@@ -90,14 +94,3 @@ function startGame() {
 
 
 }
-
-
-
-
-
-
-export {
-    startGame,
-    startButton
-
-};

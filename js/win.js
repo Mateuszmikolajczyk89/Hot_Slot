@@ -1,25 +1,25 @@
 import {
     replaceImg
-} from './imgReplacement.js';
+} from './ImgRepl.js';
 
 import {
     Bet
-} from './bet.js';
+} from './Bet.js';
 
 import {
     Credits
-} from "./credits.js";
+} from "./Credits.js";
 
 
 const credits = new Credits();
 const bet = new Bet();
 let counterOfWins = 0;
-class Win {
+export class Win {
 
     constructor() {
 
         this.table = [];
-        this.winAmount = 2;
+        this.winAmount = 1;
         this.winValueDiv = document.querySelector('.arcadeGame__winValue');
     };
 
@@ -236,7 +236,6 @@ class Win {
         this.winValueDiv.textContent = bet.value() * counterOfWins;
         this.win = this.winValueDiv.textContent;
         this.counter = this.winValueDiv.textContent;
-        console.log(counterOfWins);
 
         setTimeout(() => {
 
@@ -264,12 +263,4 @@ class Win {
 
 
 
-}
-
-
-
-
-
-export {
-    Win
 }

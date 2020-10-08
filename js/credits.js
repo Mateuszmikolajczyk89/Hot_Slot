@@ -1,10 +1,8 @@
 const creditsValue = document.querySelector('.arcadeGame__credit div ');
 let creditsNumber = 500;
-import {
-    Bet
-} from './bet.js';
 
-class Credits {
+
+export class Credits {
 
     valueCredit(bidValue) {
         if (creditsNumber == 0) {
@@ -25,7 +23,7 @@ class Credits {
                     this.counterOfCredits = 0;
                 }
             }, 25);
-            
+
             creditsNumber = parseInt(creditsValue.textContent);
         }
 
@@ -35,8 +33,4 @@ class Credits {
         return creditsNumber;
     }
 
-}
-
-export {
-    Credits
 }

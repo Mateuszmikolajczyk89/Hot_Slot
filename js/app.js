@@ -1,6 +1,7 @@
 import {
-    startGame,
-} from './start.js';
+    StartGame,
+} from './StartGame.js';
 
-
-startGame()
+let flag = true;
+const start = new StartGame(flag);
+start.inicialize()
