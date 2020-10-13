@@ -1,30 +1,31 @@
-const creditsValue = document.querySelector('.arcadeGame__credit div ');
+import {DomEl} from './DomEl.js';
+
 let creditsNumber = 500;
 
 
-export class Credits {
+export class Credits extends DomEl {
 
     valueCredit(bidValue) {
         if (creditsNumber == 0) {
-            return creditsValue.textContent = 0;
+            return this.DomElements.creditsValue.textContent = 0;
         }
-        creditsValue.textContent -= bidValue;
-        creditsNumber = parseInt(creditsValue.textContent)
+        this.DomElements.creditsValue.textContent -= bidValue;
+        creditsNumber = parseInt(this.DomElements.creditsValue.textContent);
 
     }
 
     winCredit(winCheck) {
-        this.counterOfCredits = 0
+        this.counterOfCredits = 0;
         if (winCheck) {
             const clear = setInterval(() => {
-                creditsValue.textContent = (creditsNumber + ++this.counterOfCredits);
+                this.DomElements.creditsValue.textContent = (creditsNumber + ++this.counterOfCredits);
                 if (this.counterOfCredits === winCheck) {
-                    clearInterval(clear)
+                    clearInterval(clear);
                     this.counterOfCredits = 0;
                 }
             }, 25);
 
-            creditsNumber = parseInt(creditsValue.textContent);
+            creditsNumber = parseInt(this.DomElements.creditsValue.textContent);
         }
 
     }

@@ -1,25 +1,26 @@
 import {
     RandomNumber
-} from './RandomNumber.js'
+} from './RandomNumber.js';
 
+import {
+    DomEl
+} from './DomEl.js';
 
 
 
 const randomNumber = new RandomNumber();
-const replaceImg = document.querySelectorAll('.replace_begin');
-const repalceEnd = document.querySelectorAll('.replace_end')
-const imgSlot = ["./img/blackberry.png", "./img/cherry.jpg", "./img/lemon.png", "./img/clover.png", "./img/emerland.png", "./img/seven.png"]
+const imgSlot = ["./img/blackberry.png", "./img/cherry.jpg", "./img/lemon.png", "./img/clover.png", "./img/emerland.png", "./img/seven.png"];
 
 
-class ImgRepl {
+export class ImgRepl extends DomEl{
 
     replacement() {
         const atrr = [];
-        replaceImg.forEach((el) => {
-            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(6)))])
+        this.DomElements.replaceImg.forEach((el) => {
+            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(6)))]);
             atrr.push(el.getAttribute('src'));
         })
-        repalceEnd.forEach((el, index) => {
+        this.DomElements.replaceEnd.forEach((el, index) => {
             el.setAttribute('src', atrr[index]);
         })
 
@@ -30,10 +31,3 @@ class ImgRepl {
 
 
 
-export {
-    ImgRepl,
-    replaceImg
-
-
-
-}

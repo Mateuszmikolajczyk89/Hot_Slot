@@ -1,4 +1,8 @@
 import {
+    DomEl
+} from './DomEl.js'
+
+import {
     ImgRepl
 } from './ImgRepl.js'
 
@@ -32,20 +36,21 @@ const imgRepl = new ImgRepl();
 const credits = new Credits();
 const bet = new Bet();
 const win = new Win();
-const startButton = document.querySelector('.arcadeGame__start');
 
 
 
-export class StartGame {
-    constructor(flag) {
-        this.flag = flag;
+
+export class StartGame extends DomEl{
+    constructor(play) {
+        super();
+        this.play = play;
 
     }
     startRoll() {
         bet.removeBetCheck();
         if (credits.valueNumber() < bet.value()) return;
 
-        clickEffects(startButton)
+        clickEffects(this.DomElements.startButton)
 
         rollAnimation();
 
@@ -57,9 +62,8 @@ export class StartGame {
         setTimeout(() => {
             win.makeTableOfAttributes();
             win.winCheck()
-            this.flag = !this.flag;
-            new Bet().betCheck();
-
+            bet.betCheck();
+            this.play = !this.play;
         }, 5200);
 
         credits.valueCredit(bet.value());
@@ -70,11 +74,11 @@ export class StartGame {
 
 
     inicialize() {
-        new Bet().betCheck();
-        startButton.addEventListener('click', () => {
-            if (this.flag) {
+        bet.betCheck();
+        this.DomElements.startButton.addEventListener('click', () => {
+            if (this.play) {
                 this.startRoll()
-                this.flag = !this.flag;
+                this.play = !this.play;
             };
         });
 

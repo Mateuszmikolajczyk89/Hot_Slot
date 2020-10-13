@@ -9,7 +9,7 @@ function clickEffects(button) {
 
 
 
-export {
+export { 
     clickEffects,
 
 };

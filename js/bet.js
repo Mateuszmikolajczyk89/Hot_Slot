@@ -1,40 +1,48 @@
-const bid = document.querySelector('.bid');
-const plusButton = document.querySelector('.plus');
-const minusButton = document.querySelector('.minus');
+// const bid = document.querySelector('.bid');
+// const plusButton = document.querySelector('.plus');
+// const minusButton = document.querySelector('.minus');
+import{DomEl}from './DomEl.js';
+
 const bet = [1, 5, 10, 50, 100];
 let betIndex = 0;
-bid.textContent = bet[betIndex];
 let bidValue = 1;
 
-const plus = () => {
-    if (betIndex === bet.length - 1) return;
-    ++betIndex;
-    bid.textContent = bet[betIndex]
-    bidValue = bet[betIndex]
-}
-const minus = () => {
-    if (betIndex === 0) return;
-    --betIndex;
-    bid.textContent = bet[betIndex]
-    bidValue = bet[betIndex]
-}
 
 
-export class Bet {
+
+export class Bet extends DomEl {
+    constructor(){
+        super();
+        this.DomElements.bid.textContent = bet[betIndex];
+    }
+
+    plus = () => {
+        if (betIndex === bet.length - 1) return;
+        ++betIndex;
+        this.DomElements.bid.textContent = bet[betIndex];
+        bidValue = bet[betIndex];
+    }
+     minus = () => {
+        if (betIndex === 0) return;
+        --betIndex;
+        this.DomElements.bid.textContent = bet[betIndex];
+        bidValue = bet[betIndex];
+    }
+
 
 
 
     betCheck() {
 
-        plusButton.addEventListener('click', plus)
+        this.DomElements.plusButton.addEventListener('click', this.plus);
 
-        minusButton.addEventListener('click', minus)
+        this.DomElements.minusButton.addEventListener('click', this.minus);
 
     }
     removeBetCheck() {
-        plusButton.removeEventListener('click', plus)
+        this.DomElements.plusButton.removeEventListener('click', this.plus);
 
-        minusButton.removeEventListener('click', minus)
+        this.DomElements.minusButton.removeEventListener('click', this.minus);
     }
 
     value() {
