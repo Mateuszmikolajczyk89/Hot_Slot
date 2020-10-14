@@ -1,9 +1,9 @@
 // const bid = document.querySelector('.bid');
 // const plusButton = document.querySelector('.plus');
 // const minusButton = document.querySelector('.minus');
-import{DomEl}from './DomEl.js';
+import{DomEl}from './domEl.js';
 
-const bet = [1, 5, 10, 50, 100];
+const bet = [1, 2, 5, 10, 20, 30];
 let betIndex = 0;
 let bidValue = 1;
 

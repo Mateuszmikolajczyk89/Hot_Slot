@@ -1,6 +1,6 @@
-import {DomEl} from './DomEl.js';
+import {DomEl} from './domEl.js';
 
-let creditsNumber = 500;
+let creditsNumber = 100;
 
 
 export class Credits extends DomEl {

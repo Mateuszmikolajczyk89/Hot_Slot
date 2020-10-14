@@ -1,10 +1,10 @@
 import {
     RandomNumber
-} from './RandomNumber.js';
+} from './randomNumber.js';
 
 import {
     DomEl
-}from './DomEl.js';
+}from './domEl.js';
 
 const randomNumber = new RandomNumber();
 const roll = document.querySelectorAll('.arcadeGame__roll')

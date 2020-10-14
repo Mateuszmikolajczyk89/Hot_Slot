@@ -1,10 +1,10 @@
 import {
     DomEl
-} from './DomEl.js'
+} from './domEl.js'
 
 import {
     ImgRepl
-} from './ImgRepl.js'
+} from './imgRepl.js'
 
 import {
     clickEffects,
@@ -12,15 +12,15 @@ import {
 
 import {
     Bet
-} from './Bet.js';
+} from './bet.js';
 
 import {
     Credits
-} from './Credits.js'
+} from './credits.js'
 
 import {
     Win
-} from './Win.js'
+} from './win.js'
 
 import {
     rollAnimation
@@ -74,6 +74,7 @@ export class StartGame extends DomEl{
 
 
     inicialize() {
+        this.DomElements.creditsValue.textContent = 200;
         bet.betCheck();
         this.DomElements.startButton.addEventListener('click', () => {
             if (this.play) {

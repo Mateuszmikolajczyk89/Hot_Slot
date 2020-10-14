@@ -1,14 +1,14 @@
 import {
     DomEl
-} from './DomEl.js'
+} from './domEl.js'
 
 import {
     Bet
-} from './Bet.js';
+} from './bet.js';
 
 import {
     Credits
-} from "./Credits.js";
+} from "./credits.js";
 
 
 const credits = new Credits();
@@ -32,201 +32,164 @@ export class Win extends DomEl {
     }
     winCheck() {
 
-        if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/blackberry.png")) {
-            for (let i = 0; i < 2; i++) {
-                ++counterOfWins;
-            };
-
-
-
-        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/cherry.jpg")) {
-            for (let i = 0; i < 3; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/lemon.png")) {
-            for (let i = 0; i < 4; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/clover.png")) {
-            for (let i = 0; i < 6; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/emerland.png")) {
-            for (let i = 0; i < 8; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[3] && this.table[3] === this.table[6]) && (this.table[0] === "./img/seven.png")) {
-            for (let i = 0; i < 20; i++) {
-                ++counterOfWins;
-            };
-
-        };
-
-
-
-        if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/blackberry.png")) {
-            for (let i = 0; i < 2; i++) {
-                ++counterOfWins;
-            };
-
-
-
-        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/cherry.jpg")) {
-            for (let i = 0; i < 3; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/lemon.png")) {
-            for (let i = 0; i < 4; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/clover.png")) {
-            for (let i = 0; i < 6; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/emerland.png")) {
-            for (let i = 0; i < 8; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[1] === this.table[4] && this.table[4] === this.table[7]) && (this.table[1] === "./img/seven.png")) {
-            for (let i = 0; i < 20; i++) {
-                ++counterOfWins;
-            };
-
-
-        };
-
-        if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/blackberry.png")) {
-            for (let i = 0; i < 2; i++) {
-                ++counterOfWins;
-            };
-
-
-
-        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/cherry.jpg")) {
-            for (let i = 0; i < 3; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/lemon.png")) {
-            for (let i = 0; i < 4; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/clover.png")) {
-            for (let i = 0; i < 6; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8]) && (this.table[2] === "./img/emerland.png")) {
-            for (let i = 0; i < 8; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[5] && this.table[5] === this.table[8] && (this.table[2]) === "./img/seven.png")) {
-            for (let i = 0; i < 20; i++) {
-                ++counterOfWins;
-            };
-
-
-        };
-
-        if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/blackberry.png")) {
-            for (let i = 0; i < 2; i++) {
-                ++counterOfWins;
-            };
-
-
-
-        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/cherry.jpg")) {
-            for (let i = 0; i < 3; i++) {
-                ++counterOfWins;
-            };
-
-        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/lemon.png")) {
-            for (let i = 0; i < 4; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/clover.png")) {
-            for (let i = 0; i < 6; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/emerland.png")) {
-            for (let i = 0; i < 8; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[0] === this.table[4] && this.table[4] === this.table[8]) && (this.table[0] === "./img/seven.png")) {
-            for (let i = 0; i < 20; i++) {
-                ++counterOfWins;
-            };
-
-
-        };
-
-
-        if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/blackberry.png")) {
-            for (let i = 0; i < 2; i++) {
-                ++counterOfWins;
-            };
-
-
-
-        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/cherry.jpg")) {
-            for (let i = 0; i < 3; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/lemon.png")) {
-            for (let i = 0; i < 4; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/clover.png")) {
-            for (let i = 0; i < 6; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/emerland.png")) {
-            for (let i = 0; i < 8; i++) {
-                ++counterOfWins;
-            };
-
-
-        } else if ((this.table[2] === this.table[4] && this.table[4] === this.table[6]) && (this.table[2] === "./img/seven.png")) {
-            for (let i = 0; i < 20; i++) {
-                ++counterOfWins;
-            };
-
-
-        };
+        if((this.table[0] === this.table[3] && this.table[3] === this.table[6])){
+            if(this.table[0] === "./img/blackberry.png") {
+                for (let i = 0; i < 1; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[0] === "./img/cherry.jpg") {
+                for (let i = 0; i < 2; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[0] === "./img/lemon.png") {
+                for (let i = 0; i < 3; i++) {
+                            ++counterOfWins;
+                        };
+
+            }  else if(this.table[0] === "./img/clover.png") {
+                for (let i = 0; i < 4; i++) {
+                            ++counterOfWins;
+                        };
+
+            }    else if(this.table[0] === "./img/emerland.png") {
+                for (let i = 0; i < 7; i++) {
+                            ++counterOfWins;
+                        };
+
+            }   else if(this.table[0] === "./img/seven.png") {
+                for (let i = 0; i < 20; i++) {
+                            ++counterOfWins;
+                        };
+            }        
+        }
+
+        if((this.table[1] === this.table[4] && this.table[4] === this.table[7])){
+            if(this.table[1] === "./img/blackberry.png") {
+                for (let i = 0; i < 1; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[1] === "./img/cherry.jpg") {
+                for (let i = 0; i < 2; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[1] === "./img/lemon.png") {
+                for (let i = 0; i < 3; i++) {
+                            ++counterOfWins;
+                        };
+
+            }  else if(this.table[1] === "./img/clover.png") {
+                for (let i = 0; i < 5; i++) {
+                            ++counterOfWins;
+                        };
+
+            }    else if(this.table[1] === "./img/emerland.png") {
+                for (let i = 0; i < 7; i++) {
+                            ++counterOfWins;
+                        };
+
+            }   else if(this.table[1] === "./img/seven.png") {
+                for (let i = 0; i < 20; i++) {
+                            ++counterOfWins;
+                        };
+            }        
+        }
+
+        if((this.table[2] === this.table[5] && this.table[5] === this.table[8])){
+            if(this.table[2] === "./img/blackberry.png") {
+                for (let i = 0; i < 1; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[2] === "./img/cherry.jpg") {
+                for (let i = 0; i < 2; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[2] === "./img/lemon.png") {
+                for (let i = 0; i < 3; i++) {
+                            ++counterOfWins;
+                        };
+
+            }  else if(this.table[2] === "./img/clover.png") {
+                for (let i = 0; i < 5; i++) {
+                            ++counterOfWins;
+                        };
+
+            }    else if(this.table[2] === "./img/emerland.png") {
+                for (let i = 0; i < 7; i++) {
+                            ++counterOfWins;
+                        };
+
+            }   else if(this.table[2] === "./img/seven.png") {
+                for (let i = 0; i < 20; i++) {
+                            ++counterOfWins;
+                        };
+            }        
+        }
+
+        if((this.table[0] === this.table[4] && this.table[4] === this.table[8])){
+            if(this.table[0] === "./img/blackberry.png") {
+                for (let i = 0; i < 1; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[0] === "./img/cherry.jpg") {
+                for (let i = 0; i < 2; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[0] === "./img/lemon.png") {
+                for (let i = 0; i < 3; i++) {
+                            ++counterOfWins;
+                        };
+
+            }  else if(this.table[0] === "./img/clover.png") {
+                for (let i = 0; i < 5; i++) {
+                            ++counterOfWins;
+                        };
+
+            }    else if(this.table[0] === "./img/emerland.png") {
+                for (let i = 0; i < 7; i++) {
+                            ++counterOfWins;
+                        };
+
+            }   else if(this.table[0] === "./img/seven.png") {
+                for (let i = 0; i < 20; i++) {
+                            ++counterOfWins;
+                        };
+            }        
+        }
+      
+
+        if((this.table[2] === this.table[4] && this.table[4] === this.table[6])){
+            if(this.table[2] === "./img/blackberry.png") {
+                for (let i = 0; i < 1; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[2] === "./img/cherry.jpg") {
+                for (let i = 0; i < 2; i++) {
+                            ++counterOfWins;
+                        };
+            }  else if(this.table[2] === "./img/lemon.png") {
+                for (let i = 0; i < 3; i++) {
+                            ++counterOfWins;
+                        };
+
+            }  else if(this.table[2] === "./img/clover.png") {
+                for (let i = 0; i < 5; i++) {
+                            ++counterOfWins;
+                        };
+
+            }    else if(this.table[2] === "./img/emerland.png") {
+                for (let i = 0; i < 7; i++) {
+                            ++counterOfWins;
+                        };
+
+            }   else if(this.table[2] === "./img/seven.png") {
+                for (let i = 0; i < 20; i++) {
+                            ++counterOfWins;
+                        };
+            }        
+        }
+       
+
+       
         this.winValue();
     };
 
