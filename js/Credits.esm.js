@@ -1,9 +1,9 @@
-import {DomEl} from './domEl.js';
+import {DomEl} from './DomEl.esm.js';
 
 let creditsNumber = 100;
 
 
-export class Credits extends DomEl {
+class Credits extends DomEl {
 
     valueCredit(bidValue) {
         if (creditsNumber == 0) {
@@ -35,3 +35,5 @@ export class Credits extends DomEl {
     }
 
 }
+
+export const credits = new Credits();

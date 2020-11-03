@@ -1,10 +1,10 @@
 import {
     RandomNumber
-} from './randomNumber.js';
+} from './RandomNumber.esm.js';
 
 import {
     DomEl
-} from './domEl.js';
+} from './DomEl.esm.js';
 
 
 
@@ -12,22 +12,22 @@ const randomNumber = new RandomNumber();
 const imgSlot = ["./img/blackberry.png", "./img/cherry.jpg", "./img/lemon.png", "./img/clover.png", "./img/emerland.png", "./img/seven.png"];
 
 
-export class ImgRepl extends DomEl{
+ class ImgRepl extends DomEl{
 
     replacement() {
         const atrr = [];
-        this.DomElements.replaceImg.forEach((el) => {
-            el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(6)))]);
+     
+        this.DomElements.replaceEnd.forEach((el) => {
+           el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(6)))]);
             atrr.push(el.getAttribute('src'));
         })
-        this.DomElements.replaceEnd.forEach((el, index) => {
+        this.DomElements.replaceImg.forEach((el,index) => {
             el.setAttribute('src', atrr[index]);
         })
-
     }
 
 }
 
-
+export const imgRepl = new ImgRepl();
 
 

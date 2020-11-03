@@ -1,32 +1,34 @@
 // const bid = document.querySelector('.bid');
 // const plusButton = document.querySelector('.plus');
 // const minusButton = document.querySelector('.minus');
-import{DomEl}from './domEl.js';
+import{DomEl}from './DomEl.esm.js';
 
-const bet = [1, 2, 5, 10, 20, 30];
-let betIndex = 0;
+
+
 let bidValue = 1;
 
 
 
 
-export class Bet extends DomEl {
+ class Bet extends DomEl {
+    betIndex = 0;
+    bet = [1, 2, 5, 10, 20, 30];
     constructor(){
         super();
-        this.DomElements.bid.textContent = bet[betIndex];
+        this.DomElements.bid.textContent = this.bet[this.betIndex];
     }
 
     plus = () => {
-        if (betIndex === bet.length - 1) return;
-        ++betIndex;
-        this.DomElements.bid.textContent = bet[betIndex];
-        bidValue = bet[betIndex];
+        if (this.betIndex === this.bet.length - 1) return;
+        ++this.betIndex;
+        this.DomElements.bid.textContent = this.bet[this.betIndex];
+        bidValue = this.bet[this.betIndex];
     }
      minus = () => {
-        if (betIndex === 0) return;
-        --betIndex;
-        this.DomElements.bid.textContent = bet[betIndex];
-        bidValue = bet[betIndex];
+        if (this.betIndex === 0) return;
+        --this.betIndex;
+        this.DomElements.bid.textContent = this.bet[this.betIndex];
+        bidValue = this.bet[this.betIndex];
     }
 
 
@@ -49,3 +51,5 @@ export class Bet extends DomEl {
         return bidValue;
     }
 }
+
+export const bet = new Bet();

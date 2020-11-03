@@ -1,26 +1,26 @@
 import {
     DomEl
-} from './domEl.js'
+} from './DomEl.esm.js'
 
 import {
-    ImgRepl
-} from './imgRepl.js'
+    imgRepl
+} from './ImgRepl.esm.js'
 
 import {
     clickEffects,
 } from './buttonEffect.js';
 
 import {
-    Bet
-} from './bet.js';
+    bet
+} from './Bet.esm.js';
 
 import {
-    Credits
-} from './credits.js'
+    credits
+} from './Credits.esm.js'
 
 import {
-    Win
-} from './win.js'
+    win
+} from './Win.esm.js'
 
 import {
     rollAnimation
@@ -32,19 +32,14 @@ import {
 
 
 
-const imgRepl = new ImgRepl();
-const credits = new Credits();
-const bet = new Bet();
-const win = new Win();
 
 
 
-
-export class StartGame extends DomEl{
+ export class StartGame extends DomEl{
     constructor(play) {
         super();
         this.play = play;
-
+        this.inicialize();
     }
     startRoll() {
         bet.removeBetCheck();
@@ -57,12 +52,12 @@ export class StartGame extends DomEl{
 
         setTimeout(() => {
             imgRepl.replacement();
-        }, 600);
+        }, 700);
 
         setTimeout(() => {
             win.makeTableOfAttributes();
-            win.winCheck()
             bet.betCheck();
+            win.winCheck()
             this.play = !this.play;
         }, 5200);
 
@@ -86,16 +81,5 @@ export class StartGame extends DomEl{
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
+

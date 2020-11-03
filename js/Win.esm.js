@@ -1,20 +1,22 @@
 import {
     DomEl
-} from './domEl.js'
+} from './DomEl.esm.js'
 
 import {
-    Bet
-} from './bet.js';
+    bet
+} from './Bet.esm.js';
 
 import {
-    Credits
-} from "./credits.js";
+    credits
+} from "./Credits.esm.js";
 
 
-const credits = new Credits();
-const bet = new Bet();
+
+
 let counterOfWins = 0;
-export class Win extends DomEl {
+
+
+class Win extends DomEl {
 
     constructor() {
         super();
@@ -217,11 +219,6 @@ export class Win extends DomEl {
 
     }
 
-
-
-
-
-
-
-
 }
+
+export const win = new Win();
