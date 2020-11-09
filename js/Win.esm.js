@@ -3,11 +3,11 @@ import {
 } from './DomEl.esm.js'
 
 import {
-    bet
+    bet,
 } from './Bet.esm.js';
 
 import {
-    credits
+    Credits
 } from "./Credits.esm.js";
 
 
@@ -62,7 +62,8 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }        
+            }  
+                  
         }
 
         if((this.table[1] === this.table[4] && this.table[4] === this.table[7])){
@@ -124,7 +125,8 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }        
+            }   
+      
         }
 
         if((this.table[0] === this.table[4] && this.table[4] === this.table[8])){
@@ -155,7 +157,8 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }        
+            }    
+           
         }
       
 
@@ -187,21 +190,23 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }        
+            }  
+           
         }
        
 
        
-        this.winValue();
+        this.winValue(counterOfWins);
+        counterOfWins = 0;
     };
 
-    winValue() {
+    winValue(counterOfWins) {
         this.winValueDiv.textContent = bet.value() * counterOfWins;
         this.win = this.winValueDiv.textContent;
         this.counter = this.winValueDiv.textContent;
 
         setTimeout(() => {
-
+            
             const clears = setInterval(() => {
                 this.winValueDiv.textContent = --this.counter;
                 if (this.counter <= 0) {
@@ -212,11 +217,11 @@ class Win extends DomEl {
 
 
 
-            credits.winCredit(bet.value() * counterOfWins);
-
-            counterOfWins = 0;
+           
+            
+            
         }, 1000);
-
+        new Credits().winCredit(bet.value() * counterOfWins);
     }
 
 }

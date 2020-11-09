@@ -1,11 +1,9 @@
-// const bid = document.querySelector('.bid');
-// const plusButton = document.querySelector('.plus');
-// const minusButton = document.querySelector('.minus');
+
 import{DomEl}from './DomEl.esm.js';
 
 
 
-let bidValue = 1;
+export let bidValue = 1;
 
 
 

@@ -15,16 +15,16 @@ import {
 } from './Bet.esm.js';
 
 import {
-    credits
+    credits,
 } from './Credits.esm.js'
 
-import {
+import{
     win
 } from './Win.esm.js'
 
 import {
-    rollAnimation
-} from './roll.js'
+    randomNumber
+} from './RandomNumber.esm.js';
 
 
 
@@ -41,45 +41,63 @@ import {
         this.play = play;
         this.inicialize();
     }
-    startRoll() {
-        bet.removeBetCheck();
-        if (credits.valueNumber() < bet.value()) return;
-
-        clickEffects(this.DomElements.startButton)
-
-        rollAnimation();
-
-
-        setTimeout(() => {
-            imgRepl.replacement();
-        }, 700);
-
-        setTimeout(() => {
-            win.makeTableOfAttributes();
-            bet.betCheck();
-            win.winCheck()
-            this.play = !this.play;
-        }, 5200);
-
-        credits.valueCredit(bet.value());
-
-
-    }
-
-
 
     inicialize() {
-        this.DomElements.creditsValue.textContent = 200;
+        this.DomElements.creditsValue.textContent = 100;
         bet.betCheck();
         this.DomElements.startButton.addEventListener('click', () => {
             if (this.play) {
-                this.startRoll()
-                this.play = !this.play;
+                this.startRoll();
             };
+            
         });
-
-
     }
 
-}
+
+
+    startRoll() {
+        this.play = !this.play;
+     
+        bet.removeBetCheck();
+        if (credits.valueNumber() < bet.value()) return;
+        clickEffects(this.DomElements.startButton)
+        this.rollAnimation();
+        setTimeout(() => {
+            imgRepl.replacement();
+        }, 700);
+        
+    }
+
+
+
+ 
+
+   rollAnimation() {
+    const [
+        rollOne,
+        rollTwo,
+        rollThree
+    ] = this.DomElements.roll;
+
+        credits.valueCredit(bet.value());
+        rollOne.style.animation = `rolling ${randomNumber.random(1.9,1.5)}s cubic-bezier(.2, 0.2, 0, 1.3) `;
+        rollTwo.style.animation = `rolling ${randomNumber.random(2.3,2.1)}s 0.2s cubic-bezier(.2, 0.2, 0, 1.3) `;
+        rollThree.style.animation = `rolling ${randomNumber.random(3.6,3.2)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `;
+    
+    
+        rollThree.addEventListener('animationend', () =>{
+    
+            this.DomElements.roll.forEach((el) => {
+                el.style.animation = '';
+            })
+                win.makeTableOfAttributes();
+                win.winCheck();
+                bet.betCheck(); 
+                this.play = true;
+                console.log('listener na koniec animacji');
+                
+            });
+          
+        }
+    }
 

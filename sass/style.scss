@@ -14,45 +14,49 @@ html {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 65vw;
-
-    background-color: black;
-    border-radius: 10% 10% 0 0;
     height: 100vh;
-    min-height: 600px;
     overflow: hidden;
 
     &__window {
-
         position: absolute;
         display: flex;
         top: 30%;
         left: 50%;
         transform: translate(-50%, -40%);
-        width: 40vw;
-        height: 60vh;
-        min-width: 500px;
-        background-color: white;
+        width: 60vw;
+        height: 700px;
+        min-height: 200px;
         box-shadow: 0 0 0 15px rgb(33, 204, 133);
-
         border-radius: 5% 5% 0 0;
         overflow: hidden;
     }
 
     &__roll {
-        width: 33.3%;
-        height: 330vh;
-
-
-
+        position: absolute;
+        width: 20vw;
+        height: 3900px;
+}
+     &__field {
+        position: relative;
+        width: 100%;
+        height: calc(700px/3);
+        border: 3px solid rgb(33, 204, 133);
     }
 
-    &__field {
-        position: relative;
-        height: 20vh;
-        border: 3px solid rgb(33, 204, 133);
-
-
+    .one &__field {
+        top: 0;
+        left: 0;
+     
+    }
+    .two &__field {
+        top: 0;
+        left: 100%;
+    
+    }
+    .three &__field {
+        top: 0;
+        left: 200%;
+   
     }
 
     &__img {
@@ -70,17 +74,15 @@ html {
     &__panel {
         position: absolute;
         display: flex;
-        top: 68%;
+        top: 75%;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 70%;
-        height: 30vh;
-        min-width: 600px;
+        width: 50%;
+        min-height: 250px;
+        min-width: 400px;
         background-color: white;
         border: 1px solid rgb(33, 204, 133);
-        ;
         box-shadow: 0 0 0 15px rgb(33, 204, 133);
-        ;
         border-radius: 30% 30% 0 0;
     }
 

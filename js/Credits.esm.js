@@ -3,7 +3,7 @@ import {DomEl} from './DomEl.esm.js';
 let creditsNumber = 100;
 
 
-class Credits extends DomEl {
+export class Credits extends DomEl {
 
     valueCredit(bidValue) {
         if (creditsNumber == 0) {
@@ -15,19 +15,22 @@ class Credits extends DomEl {
     }
 
     winCredit(winCheck) {
+       setTimeout(() => {
         this.counterOfCredits = 0;
         if (winCheck) {
             const clear = setInterval(() => {
                 this.DomElements.creditsValue.textContent = (creditsNumber + ++this.counterOfCredits);
+            
                 if (this.counterOfCredits === winCheck) {
                     clearInterval(clear);
                     this.counterOfCredits = 0;
+                    
                 }
             }, 25);
 
             creditsNumber = parseInt(this.DomElements.creditsValue.textContent);
-        }
-
+        }else return;
+      }, 1000);
     }
 
     valueNumber() {
