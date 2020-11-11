@@ -13,19 +13,19 @@ export let bidValue = 1;
     bet = [1, 2, 5, 10, 20, 30];
     constructor(){
         super();
-        this.DomElements.bid.textContent = this.bet[this.betIndex];
+        this.domElements.bid.textContent = this.bet[this.betIndex];
     }
 
     plus = () => {
         if (this.betIndex === this.bet.length - 1) return;
         ++this.betIndex;
-        this.DomElements.bid.textContent = this.bet[this.betIndex];
+        this.domElements.bid.textContent = this.bet[this.betIndex];
         bidValue = this.bet[this.betIndex];
     }
      minus = () => {
         if (this.betIndex === 0) return;
         --this.betIndex;
-        this.DomElements.bid.textContent = this.bet[this.betIndex];
+        this.domElements.bid.textContent = this.bet[this.betIndex];
         bidValue = this.bet[this.betIndex];
     }
 
@@ -34,15 +34,15 @@ export let bidValue = 1;
 
     betCheck() {
 
-        this.DomElements.plusButton.addEventListener('click', this.plus);
+        this.domElements.plusButton.addEventListener('click', this.plus);
 
-        this.DomElements.minusButton.addEventListener('click', this.minus);
+        this.domElements.minusButton.addEventListener('click', this.minus);
 
     }
     removeBetCheck() {
-        this.DomElements.plusButton.removeEventListener('click', this.plus);
+        this.domElements.plusButton.removeEventListener('click', this.plus);
 
-        this.DomElements.minusButton.removeEventListener('click', this.minus);
+        this.domElements.minusButton.removeEventListener('click', this.minus);
     }
 
     value() {

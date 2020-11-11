@@ -1,4 +1,13 @@
-import {DomEl} from './DomEl.esm.js';
+import {
+    DomEl
+} from './DomEl.esm.js';
+
+import {
+    soundEffects
+} from './SoundEffects.esm.js';
+
+
+
 
 let creditsNumber = 100;
 
@@ -7,10 +16,10 @@ export class Credits extends DomEl {
 
     valueCredit(bidValue) {
         if (creditsNumber == 0) {
-            return this.DomElements.creditsValue.textContent = 0;
+            return this.domElements.creditsValue.textContent = 0;
         }
-        this.DomElements.creditsValue.textContent -= bidValue;
-        creditsNumber = parseInt(this.DomElements.creditsValue.textContent);
+        this.domElements.creditsValue.textContent -= bidValue;
+        creditsNumber = parseInt(this.domElements.creditsValue.textContent);
 
     }
 
@@ -19,18 +28,20 @@ export class Credits extends DomEl {
         this.counterOfCredits = 0;
         if (winCheck) {
             const clear = setInterval(() => {
-                this.DomElements.creditsValue.textContent = (creditsNumber + ++this.counterOfCredits);
+                this.domElements.creditsValue.textContent = (creditsNumber + ++this.counterOfCredits);
             
                 if (this.counterOfCredits === winCheck) {
                     clearInterval(clear);
                     this.counterOfCredits = 0;
-                    
+                    soundEffects.stopWinSound();
                 }
             }, 25);
 
-            creditsNumber = parseInt(this.DomElements.creditsValue.textContent);
-        }else return;
+            creditsNumber = parseInt(this.domElements.creditsValue.textContent);
+            
+        } else return;
       }, 1000);
+
     }
 
     valueNumber() {

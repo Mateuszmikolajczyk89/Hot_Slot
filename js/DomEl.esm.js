@@ -1,6 +1,6 @@
 export class DomEl {
 
-    DomElements = {
+    domElements = {
         startButton: document.querySelector('.arcadeGame__start'),
         roll: document.querySelectorAll('.arcadeGame__roll'),
         replaceImg: document.querySelectorAll('.replace_begin'),

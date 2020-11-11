@@ -19,15 +19,15 @@ const imgSlot = ["./img/blackberry.png", "./img/cherry.jpg", "./img/lemon.png", 
         const atrr = [];
      
 
-        this.DomElements.replaceEnd.forEach((el) => {
-           el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(2)))]);
+        this.domElements.replaceEnd.forEach((el) => {
+           el.setAttribute('src', imgSlot[Math.floor(randomNumber.random(randomNumber.random(6)))]);
             atrr.push(el.getAttribute('src'));
         })
-        this.DomElements.replaceImg.forEach((el,index) => {
+        this.domElements.replaceImg.forEach((el,index) => {
             el.setAttribute('src', atrr[index]);
         })
 
-        this.DomElements.endline.forEach((el,index) => {
+        this.domElements.endline.forEach((el,index) => {
             el.setAttribute('src', atrr[index]);
         })
     }

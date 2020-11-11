@@ -10,7 +10,9 @@ import {
     Credits
 } from "./Credits.esm.js";
 
-
+import{
+    soundEffects
+} from './SoundEffects.esm.js';
 
 
 let counterOfWins = 0;
@@ -27,7 +29,7 @@ class Win extends DomEl {
 
     makeTableOfAttributes() {
         this.table = [];
-        this.DomElements.replaceImg.forEach((el) => {
+        this.domElements.replaceImg.forEach((el) => {
             this.table.push(el.getAttribute('src'));
 
         });
@@ -201,6 +203,8 @@ class Win extends DomEl {
     };
 
     winValue(counterOfWins) {
+        if(!counterOfWins) return;
+        soundEffects.startWinSound();
         this.winValueDiv.textContent = bet.value() * counterOfWins;
         this.win = this.winValueDiv.textContent;
         this.counter = this.winValueDiv.textContent;
@@ -212,6 +216,7 @@ class Win extends DomEl {
                 if (this.counter <= 0) {
                     clearInterval(clears);
                     this.winValueDiv.textContent = 0;
+                    
                 }
             }, 30);
 

@@ -26,6 +26,10 @@ import {
     randomNumber
 } from './RandomNumber.esm.js';
 
+import {
+    soundEffects
+}from './SoundEffects.esm.js'
+
 
 
 
@@ -43,9 +47,9 @@ import {
     }
 
     inicialize() {
-        this.DomElements.creditsValue.textContent = 100;
+        this.domElements.creditsValue.textContent = 100;
         bet.betCheck();
-        this.DomElements.startButton.addEventListener('click', () => {
+        this.domElements.startButton.addEventListener('click', () => {
             if (this.play) {
                 this.startRoll();
             };
@@ -56,15 +60,20 @@ import {
 
 
     startRoll() {
+        soundEffects.startRollSound();
         this.play = !this.play;
      
         bet.removeBetCheck();
-        if (credits.valueNumber() < bet.value()) return;
-        clickEffects(this.DomElements.startButton)
+        if (credits.valueNumber() < bet.value()){
+
+            //tutaj blokowanie kręcenia kiedy stawka wieksza od kredytów, bez returna bo blokuje gre
+            
+        } 
+        clickEffects(this.domElements.startButton)
         this.rollAnimation();
         setTimeout(() => {
             imgRepl.replacement();
-        }, 700);
+        }, 550);
         
     }
 
@@ -73,28 +82,39 @@ import {
  
 
    rollAnimation() {
+        
+           
+    
     const [
         rollOne,
         rollTwo,
         rollThree
-    ] = this.DomElements.roll;
+    ] = this.domElements.roll;
+
+    this.domElements.roll.forEach((el) => {
+        el.addEventListener('animationend', ()=> soundEffects.stopRollBeep());
+    })
+
+
 
         credits.valueCredit(bet.value());
-        rollOne.style.animation = `rolling ${randomNumber.random(1.9,1.5)}s cubic-bezier(.2, 0.2, 0, 1.3) `;
-        rollTwo.style.animation = `rolling ${randomNumber.random(2.3,2.1)}s 0.2s cubic-bezier(.2, 0.2, 0, 1.3) `;
-        rollThree.style.animation = `rolling ${randomNumber.random(3.6,3.2)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `;
-    
-    
+        rollOne.style.animation = `rolling ${randomNumber.random(1.3,0.9)}s cubic-bezier(.2, 0.2, 0, 1.3) `;
+        rollTwo.style.animation = `rolling ${randomNumber.random(1.7,1.5)}s 0.2s cubic-bezier(.2, 0.2, 0, 1.3) `;
+        rollThree.style.animation = `rolling ${randomNumber.random(3.0,2.5)}s 0.4s cubic-bezier(.2, 0.2, 0, 1.3) `;
+
+
+       
         rollThree.addEventListener('animationend', () =>{
-    
-            this.DomElements.roll.forEach((el) => {
+            
+            this.domElements.roll.forEach((el) => {
+               
                 el.style.animation = '';
             })
                 win.makeTableOfAttributes();
                 win.winCheck();
                 bet.betCheck(); 
+                soundEffects.stopRollSound();
                 this.play = true;
-                console.log('listener na koniec animacji');
                 
             });
           
