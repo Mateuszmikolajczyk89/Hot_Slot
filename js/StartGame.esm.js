@@ -60,21 +60,19 @@ import {
 
 
     startRoll() {
-        soundEffects.startRollSound();
-        this.play = !this.play;
-     
-        bet.removeBetCheck();
-        if (credits.valueNumber() < bet.value()){
+        if (credits.valueNumber() >= bet.value()){
 
-            //tutaj blokowanie kręcenia kiedy stawka wieksza od kredytów, bez returna bo blokuje gre
-            
-        } 
-        clickEffects(this.domElements.startButton)
-        this.rollAnimation();
-        setTimeout(() => {
-            imgRepl.replacement();
-        }, 550);
+            soundEffects.startRollSound();
+            this.play = !this.play;
         
+            bet.removeBetCheck();
+        
+            clickEffects(this.domElements.startButton)
+            this.rollAnimation();
+            setTimeout(() => {
+                imgRepl.replacement();
+            }, 450);
+        } 
     }
 
 

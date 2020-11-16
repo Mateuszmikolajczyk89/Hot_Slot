@@ -40,6 +40,7 @@ class Win extends DomEl {
             if(this.table[0] === "./img/blackberry.png") {
                 for (let i = 0; i < 1; i++) {
                             ++counterOfWins;
+                            
                         };
             }  else if(this.table[0] === "./img/cherry.jpg") {
                 for (let i = 0; i < 2; i++) {
