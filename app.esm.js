@@ -8,4 +8,4 @@ import {
 
 let play = true;
 
-new StartGame(play);
+const startGame = new StartGame(play);
