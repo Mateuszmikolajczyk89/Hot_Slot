@@ -10,6 +10,10 @@ export class DomEl {
         bid: document.querySelector('.bid'),
         plusButton: document.querySelector('.plus'),
         minusButton: document.querySelector('.minus'),
+        winValueDiv: document.querySelector('.arcadeGame__winValue'),
+        winSound: document.querySelector('.winSound'),
+        gameSound: document.querySelector('.gameSound'),
+        endBeep: document.querySelector('.endBeep'),
     };
 
 };

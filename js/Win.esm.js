@@ -23,7 +23,7 @@ class Win extends DomEl {
     constructor() {
         super();
         this.table = [];
-        this.winValueDiv = document.querySelector('.arcadeGame__winValue');
+        this.winValueDiv =  this.domElements.winValueDiv;
     };
 
 
@@ -40,7 +40,7 @@ class Win extends DomEl {
             if(this.table[0] === "./img/blackberry.png") {
                 for (let i = 0; i < 1; i++) {
                             ++counterOfWins;
-                            
+
                         };
             }  else if(this.table[0] === "./img/cherry.jpg") {
                 for (let i = 0; i < 2; i++) {
@@ -65,8 +65,8 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }  
-                  
+            }
+
         }
 
         if((this.table[1] === this.table[4] && this.table[4] === this.table[7])){
@@ -97,7 +97,7 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }        
+            }
         }
 
         if((this.table[2] === this.table[5] && this.table[5] === this.table[8])){
@@ -128,8 +128,8 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }   
-      
+            }
+
         }
 
         if((this.table[0] === this.table[4] && this.table[4] === this.table[8])){
@@ -160,10 +160,10 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }    
-           
+            }
+
         }
-      
+
 
         if((this.table[2] === this.table[4] && this.table[4] === this.table[6])){
             if(this.table[2] === "./img/blackberry.png") {
@@ -193,12 +193,12 @@ class Win extends DomEl {
                 for (let i = 0; i < 20; i++) {
                             ++counterOfWins;
                         };
-            }  
-           
-        }
-       
+            }
 
-       
+        }
+
+
+
         this.winValue(counterOfWins);
         counterOfWins = 0;
     };
@@ -211,21 +211,21 @@ class Win extends DomEl {
         this.counter = this.winValueDiv.textContent;
 
         setTimeout(() => {
-            
+
             const clears = setInterval(() => {
                 this.winValueDiv.textContent = --this.counter;
                 if (this.counter <= 0) {
                     clearInterval(clears);
                     this.winValueDiv.textContent = 0;
-                    
+
                 }
             }, 30);
 
 
 
-           
-            
-            
+
+
+
         }, 1000);
         new Credits().winCredit(bet.value() * counterOfWins);
     }

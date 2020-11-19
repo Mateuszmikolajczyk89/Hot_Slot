@@ -4,12 +4,12 @@ import {DomEl} from './DomEl.esm.js';
 class SoundEffects extends DomEl {
     constructor(){
         super();
-        this.winSound = new Audio('../sounds/winSound.mp3');
-        this.winSound.crossOrigin = "Anonymous";
-        this.endBeep = new Audio('../sounds/endBeep.wav');
-        this.endBeep.crossOrigin = "Anonymous";
-        this.rollSound = new Audio('../sounds/gameSound.wav');
-        this.rollSound.crossOrigin = "Anonymous";
+        this.winSound = this.domElements.winSound;
+        this.winSound.crossOrigin = "anonymous";
+        this.endBeep = this.domElements.endBeep;
+        this.endBeep.crossOrigin = "anonymous";
+        this.rollSound = this.domElements.gameSound;
+        this.rollSound.crossOrigin = "anonymous";
         this.rollSound.loop = true;
     }
 
@@ -35,6 +35,6 @@ class SoundEffects extends DomEl {
         this.winSound.load();
     }
 
-} 
+}
 
 export const soundEffects = new SoundEffects();
