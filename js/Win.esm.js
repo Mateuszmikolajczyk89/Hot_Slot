@@ -15,7 +15,7 @@ import{
 } from './SoundEffects.esm.js';
 
 
-let counterOfWins = 0;
+let counterOfWins = [];
 
 
 class Win extends DomEl {
@@ -23,7 +23,7 @@ class Win extends DomEl {
     constructor() {
         super();
         this.table = [];
-        this.winValueDiv =  this.domElements.winValueDiv;
+        this.winValueDiv = this.domElements.winValueDiv;
     };
 
 
@@ -38,128 +38,113 @@ class Win extends DomEl {
 
         if((this.table[0] === this.table[3] && this.table[3] === this.table[6])){
             if(this.table[0] === "./img/blackberry.png") {
-                for (let i = 0; i < 1; i++) {
-                            ++counterOfWins;
 
-                        };
+                    counterOfWins.push(1);
+                
             }  else if(this.table[0] === "./img/cherry.jpg") {
-                for (let i = 0; i < 2; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(2);
+
             }  else if(this.table[0] === "./img/lemon.png") {
-                for (let i = 0; i < 3; i++) {
-                            ++counterOfWins;
-                        };
+               
+                    counterOfWins.push(3);
 
             }  else if(this.table[0] === "./img/clover.png") {
-                for (let i = 0; i < 4; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(5);
 
             }    else if(this.table[0] === "./img/emerland.png") {
-                for (let i = 0; i < 7; i++) {
-                            ++counterOfWins;
-                        };
+                
+                    counterOfWins.push(7);
 
             }   else if(this.table[0] === "./img/seven.png") {
-                for (let i = 0; i < 20; i++) {
-                            ++counterOfWins;
-                        };
+                 
+                    counterOfWins.push(20);
+
             }
 
         }
 
         if((this.table[1] === this.table[4] && this.table[4] === this.table[7])){
             if(this.table[1] === "./img/blackberry.png") {
-                for (let i = 0; i < 1; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(1);
+
             }  else if(this.table[1] === "./img/cherry.jpg") {
-                for (let i = 0; i < 2; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(2);
+
             }  else if(this.table[1] === "./img/lemon.png") {
-                for (let i = 0; i < 3; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(3);
 
             }  else if(this.table[1] === "./img/clover.png") {
-                for (let i = 0; i < 5; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(5);
 
             }    else if(this.table[1] === "./img/emerland.png") {
-                for (let i = 0; i < 7; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(7);
 
             }   else if(this.table[1] === "./img/seven.png") {
-                for (let i = 0; i < 20; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(20);
+
             }
         }
 
         if((this.table[2] === this.table[5] && this.table[5] === this.table[8])){
             if(this.table[2] === "./img/blackberry.png") {
-                for (let i = 0; i < 1; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(1);
+
             }  else if(this.table[2] === "./img/cherry.jpg") {
-                for (let i = 0; i < 2; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(2);
+
             }  else if(this.table[2] === "./img/lemon.png") {
-                for (let i = 0; i < 3; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(3);
 
             }  else if(this.table[2] === "./img/clover.png") {
-                for (let i = 0; i < 5; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(5);
 
             }    else if(this.table[2] === "./img/emerland.png") {
-                for (let i = 0; i < 7; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(7);
 
             }   else if(this.table[2] === "./img/seven.png") {
-                for (let i = 0; i < 20; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(20);
             }
 
         }
 
         if((this.table[0] === this.table[4] && this.table[4] === this.table[8])){
             if(this.table[0] === "./img/blackberry.png") {
-                for (let i = 0; i < 1; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(1);
+
             }  else if(this.table[0] === "./img/cherry.jpg") {
-                for (let i = 0; i < 2; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(2);
+
             }  else if(this.table[0] === "./img/lemon.png") {
-                for (let i = 0; i < 3; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(3);
 
             }  else if(this.table[0] === "./img/clover.png") {
-                for (let i = 0; i < 5; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(5);
 
             }    else if(this.table[0] === "./img/emerland.png") {
-                for (let i = 0; i < 7; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(7);
 
             }   else if(this.table[0] === "./img/seven.png") {
-                for (let i = 0; i < 20; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(20);
             }
 
         }
@@ -167,44 +152,40 @@ class Win extends DomEl {
 
         if((this.table[2] === this.table[4] && this.table[4] === this.table[6])){
             if(this.table[2] === "./img/blackberry.png") {
-                for (let i = 0; i < 1; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(1);
+
             }  else if(this.table[2] === "./img/cherry.jpg") {
-                for (let i = 0; i < 2; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(2);
+
             }  else if(this.table[2] === "./img/lemon.png") {
-                for (let i = 0; i < 3; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(3);
 
             }  else if(this.table[2] === "./img/clover.png") {
-                for (let i = 0; i < 5; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(5);
 
             }    else if(this.table[2] === "./img/emerland.png") {
-                for (let i = 0; i < 7; i++) {
-                            ++counterOfWins;
-                        };
+
+                    counterOfWins.push(7);
 
             }   else if(this.table[2] === "./img/seven.png") {
-                for (let i = 0; i < 20; i++) {
-                            ++counterOfWins;
-                        };
-            }
+
+                    counterOfWins.push(20);
+            }  
 
         }
-
-
-
-        this.winValue(counterOfWins);
-        counterOfWins = 0;
+            if(counterOfWins[0]) {
+            counterOfWins.reduce((sum, value)=> sum += value);
+            this.winValue(counterOfWins[0]);
+        }
+            counterOfWins = [];
     };
 
     winValue(counterOfWins) {
-        if(!counterOfWins) return;
+        
         soundEffects.startWinSound();
         this.winValueDiv.textContent = bet.value() * counterOfWins;
         this.win = this.winValueDiv.textContent;
