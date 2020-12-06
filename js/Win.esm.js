@@ -178,14 +178,14 @@ class Win extends DomEl {
 
         }
             if(counterOfWins[0]) {
-            counterOfWins.reduce((sum, value)=> sum += value);
-            this.winValue(counterOfWins[0]);
+            counterOfWins = counterOfWins.reduce((sum, value)=> sum += value);
+            this.winValue(counterOfWins);
         }
             counterOfWins = [];
     };
 
     winValue(counterOfWins) {
-        
+        console.log(counterOfWins);
         soundEffects.startWinSound();
         this.winValueDiv.textContent = bet.value() * counterOfWins;
         this.win = this.winValueDiv.textContent;
